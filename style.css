@@ -1,0 +1,151 @@
+body {
+	background:#b5b5b5;
+	font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.senbacontent {
+	background:transparent;
+	width: 95%;
+	height:auto;
+	position: absolute;
+	border-radius:4pt;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+}
+.senbatsu {
+  width: calc(90% - 8px);
+  height: 100px;
+  background-color: #e8e6e6;
+	margin:0 auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+	border-radius:4pt;
+	transition: transform 1s;
+}
+
+.senbatsu:before{
+	position:absolute;
+	color:#4d4d4d;
+	left:8%;
+	overflow:hidden;
+	z-index:0;
+}
+
+.senbatsu > img {
+  width: auto;
+  height: 95px;
+}
+#senbatsu1:before{
+	content:"１列目";
+}
+
+#senbatsu2:before{
+	content:"２列目";
+}
+
+#senbatsu3:before{
+	content:"３列目";
+}
+.ketdrag {
+	width:70%;
+	color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align:center;
+  margin: 0 auto;
+}
+.ketdrag:before {
+	content:"When you drag a member's photo into the senbatsu row, it automatically positions itself to the right of the previous photo. The images that are already arranged in the senbatsu row currently cannot be modified."
+}
+
+h1 {
+	padding-top:10pt;
+	width:70%;
+	color:white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+	margin: 0 auto;	
+}
+
+.credit {
+	width:70%;
+	color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align:center;
+  margin: 0 auto;
+}
+
+#area-gambar {
+	display: flex;
+  align-items: center;
+	flex-wrap: nowrap;
+	position: relative;
+	left: 0;
+	bottom: 10pt;
+	width: 85%;
+	margin: 0 auto;
+	padding:10pt;
+	background: purple;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: calc(110px + 10pt);
+	border-radius:4pt;
+	gap:5pt;
+}
+
+.membersbt {
+	z-index:1;
+	border-radius:3pt;
+  width: auto;
+  height: 100px;
+  cursor: move;
+  margin: 3px;
+  background-color: #f2f2f2;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 1s;
+}
+
+.membersbt.dragging {
+  transform: scale(1.2);
+}
+
+#reset-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+	padding:10pt;
+  width: 100px;
+  height: 30px;
+  background-color: purple;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.5s;
+}
+
+#reset-button:hover {
+  background-color: #fff;
+  color: purple;
+}
+
+#reset-button:active {
+  transform: translateY(2px);
+}
+
+#reset-button:before {
+  content:"RESET";
+}
