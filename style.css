@@ -6,15 +6,16 @@ body {
 }
 
 .senbacontent {
-	background:transparent;
-	width: 95%;
-	height:auto;
-	position: absolute;
-	border-radius:4pt;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    border-radius: 4pt;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.2);
+    overflow: overlay;
 }
 .senbatsu {
   width: calc(90% - 8px);
@@ -40,7 +41,7 @@ body {
 
 .senbatsu > img {
   width: auto;
-  height: 95px;
+  height: 90px;
 }
 #senbatsu1:before{
 	content:"１列目";
